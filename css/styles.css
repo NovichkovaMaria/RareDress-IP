@@ -1,5 +1,5 @@
 body{
-    font-family: Cormorant SC;
+    font-family: Cormorant SC, 'Courier New', Courier, monospace ;
     font-size: 20px;
 }
 .button-my{
@@ -12,7 +12,7 @@ body{
     line-height: 21px;
     color: #000000;
     cursor: pointer;
-    font-family: Cormorant SC;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-size: 20px;
 }
@@ -23,12 +23,12 @@ body{
     border: 1px solid #E5E5E5;
     box-sizing: border-box;
     border-radius: 4px;
-    font-family: Cormorant SC;
+    font-family: Cormorant SC, 'Courier New', Courier, monospace;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 19px;
 }
 .margincard {
-margin-bottom: 1rem;
+margin-bottom: 1rm;
 }
