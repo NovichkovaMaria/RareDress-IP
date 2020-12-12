@@ -6,16 +6,19 @@ form.addEventListener('submit', (event) => {
     const values = [...new FormData(form).values()];
     console.log(values);
 
-    if (!checkIfNotNull(values[0])) return showMessage('error', 'Заполните поле ФИО');
-    if (!checkIfNotNull(values[1])) return showMessage('error', 'Заполните поле Email');
+    if (!checkNotNull(values[0])) return showMessage('error', 'Заполните поле ФИО');
+    if (!checkNotNull(values[1])) return showMessage('error', 'Заполните поле Email');
+    if (!checkNotNull(values[2])) return showMessage('error', 'Заполните поле ТЕЛЕФОН');
     if (!checkPhone(values[2])) return showMessage('error', 'Неверно введен номер телефона');
     if (!checkRadio(values[3])) return showMessage('error', 'Выберете район доставки');
-    if (!checkCheckbox(values[4])) return showMessage('error', 'Подтвердите согласие на обработку данных');
 
-    showMessage('success', 'Заказ оформлен');
+    if (customCheck1.checked) {
+        return showMessage('success', 'Заказ оформлен');
+    }
+    return showMessage('error', 'Потдвердите согласие на обработку данных');   
 });
 
-function checkIfNotNull(str) {
+function checkNotNull(str) {
     return str !== '';
 }
 
@@ -24,7 +27,7 @@ function checkPhone(phone) {
     return phone != "" && reg.test(phone);
 }
 
-function checkRadio(customRadio) {
+function checkRadio(radio) {
 
     var inp = document.getElementsByName('customRadio');
     for (var i = 0; i < inp.length; i++) {
@@ -32,14 +35,6 @@ function checkRadio(customRadio) {
         if (radio.type == "radio" && radio.checked) {
             return true
         }
-    }
-    return false;
-}
-
-function checkCheckbox(customCheck1) {
-
-    if (customCheck1.checked) {
-        return true
     }
     return false;
 }
