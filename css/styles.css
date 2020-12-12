@@ -12,9 +12,13 @@ body{
     line-height: 21px;
     color: #000000;
     cursor: pointer;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: g;
     font-style: normal;
     font-size: 20px;
+}
+.mybody{
+    font-family: Cormorant SC, 'Courier New', Courier, monospace ;
+    font-size: 16px;
 }
 .mycard {
     width: 330px;
